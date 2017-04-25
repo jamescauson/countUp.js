@@ -112,11 +112,7 @@ export class CountUpDirective implements OnInit {
 
     private animate() {
         this._countUp.reset();
-        if (this.endVal > 999) {
-            this._countUp.start(() => this._countUp.update(this.endVal));
-        } else {
-            this._countUp.start();
-        }
+        this._countUp.start();
     }
 }
 
